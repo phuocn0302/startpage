@@ -1,0 +1,310 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css?family=JetBrains Mono'); 
+
+:root {
+  /* Font Size */
+  --fg-greet: 2.2vh;
+  --fg-list: 2vh;
+
+  /* Icon size */
+  --bt-icon: 4vh;
+  --ls-icon: 3.2vh;
+
+  /* Color */
+  --red: #D45A57; 
+  --violet: #cba6f7;
+  --blue: #89dceb;
+  --green: #a6e3a1;
+  --yellow: #f9e2af;
+
+  --background: #0B0C0D; 
+  --foreground: #181A1E; 
+
+  /* Fonts Color */
+  --fg: #F3F3F3; 
+  --sfg: #0B0C0D;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jetbrains Mono";
+  transition: 0.2s ease;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background);
+  display: grid;
+  grid-template-rows: 80px 1fr;
+  grid-template-areas: 
+  "header"
+  "main"
+  ;
+  
+}
+
+/* Layout */
+
+.header {
+
+  /* border: 5px solid magenta; */
+  justify-content: space-between;
+  grid-area: header;
+  /* background-color: var(--foreground); */
+  background-color: var(--foreground);
+  display: flex;
+  width: 100vw;
+  height: 80px;
+}
+
+/* Header */
+
+.userBlock {
+  width: 15vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar img {
+  width: auto;
+  height: auto;
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 100%;
+}
+
+.greetingBlock {
+  width: 50vw;
+  
+  margin: 15px 0;
+  align-content: center;
+
+  background-color: #23262c;
+  border-radius: 10px;
+}
+
+.greeting {
+  font-size: var(--fg-greet);
+  font-weight: 600;
+  color: var(--violet);
+  place-self: center;
+  text-align: center;
+}
+
+.weatherBlock {
+  width: 15vw;
+  display: grid;
+  grid-template-areas: 
+  "icon temp"
+  "desc desc";
+  grid-template-columns: 1fr 1fr;;
+  column-gap: 1vw;
+  text-decoration: none;
+}
+
+.weatherIcon {
+  grid-area: icon;
+  padding-top: 1vh;
+  place-self: end;
+}
+
+.weatherIcon img {
+  height: 4vh;
+  width: auto;
+}
+
+.weatherValue {
+  grid-area: temp;
+  padding-top: 1vh;
+  align-self: center;
+  color: var(--green);
+  font-size: 2.5vh;
+  font-weight: 600;
+}
+
+.weatherDescription {
+  grid-area: desc;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--yellow);
+  font-weight: 600;
+  font-size: 2vh;
+}
+
+.main {
+  grid-area: main;
+
+  display: flex;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "lk pt";
+  padding: 5vh 10vw;
+}
+
+.linksBlock {
+  grid-area: lk;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "bt"
+  "ls";
+}
+
+/* Card */
+
+.card {
+  background-color: var(--foreground);
+  border-radius: 10px;
+}
+
+/* Button */
+
+.buttonContainer{
+  grid-area: bt;
+
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-areas: 
+  "b1 b2 b3"
+  "b4 b5 b6";
+  justify-items: center;
+  gap: 2vw;
+  padding: 2vw;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.button:hover {
+  transform: translateY(-1rem);
+  background-color: var(--red);
+}
+
+.button:hover svg {
+  stroke: var(--background);
+}
+
+.buttonIcon {
+  color: var(--fg);
+  height: var(--bt-icon);
+  width: var(--bt-icon);
+}
+
+.button__1 {
+  grid-area: b1;
+}
+.button__2 {
+  grid-area: b2;
+}
+.button__3 {
+  grid-area: b3;
+}
+.button__4 {
+  grid-area: b4;
+}
+.button__5 {
+  grid-area: b5;
+}
+.button__6 {
+  grid-area: b6;;
+}
+
+/* List  */
+
+.listContainer {
+  grid-area: ls;
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "l1 l2";
+  padding: 30px;
+  gap: 40px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.listItem {
+  margin: 1vh;
+  padding: 6px 2vh;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--fg-list);
+  color: var(--fg);
+  text-align: left;
+  border-radius: 5px;
+  width: 70%;
+}
+
+.listItem:hover {
+  background-color: var(--red);
+  color: var(--background);
+  transform: scale(1.1);
+}
+
+.ls1:hover {
+  background-color: var(--violet);
+}
+
+.ls2:hover {
+  background-color: var(--blue);
+}
+
+.ls3:hover {
+  background-color: var(--green);
+}
+
+.ls4:hover {
+  background-color: var(--yellow);
+}
+
+.list__1 {
+  grid-area: l1;
+}
+
+.list__2 {
+  grid-area: l2;
+}
+
+/* Image */
+
+.imageBlock {
+  padding: 30px;
+}
+
+.imageBlock img {
+  grid-area: pt;
+
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 75% 100%;
+  border-radius: 10px;
+}
+
+.imageBlock:hover {
+  transform: scale(1.05);
+}
+

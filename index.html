@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   <meta charset="utf-8"/>
+    <title>startpage</title>
+    <link rel="icon" href="assets/icons/favicon.ico"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body class="">
+    <div class="header">
+      <div class="userBlock">
+        <div class="avatar">
+          <img src="assets/picture/avatar.png" alt="user avatar">
+        </div>
+      </div>
+      
+      <div class="greetingBlock">
+        <div class="greeting" id="greeting"></div>
+      </div>
+      
+      <a href="https://openweathermap.org/" class="weatherBlock">
+        <div class="weatherIcon">
+          <img src="assets/icons/weatherIcon/unknown.png" alt="weather icon"/>
+        </div>
+        
+        <div class="weatherValue">
+          <p>- °C</p>
+        </div>
+
+        <div class="weatherDescription">
+          <p></p>
+        </div>
+      </a>
+    </div>
+
+    <div class="sidebar"></div>
+
+    <div class="main">
+      <div class="container">
+        <div class="linksBlock" id="linksBlock">
+          <div class="buttonContainer" id="buttons"></div>
+          <div class="listContainer" id="lists"></div>
+        </div>
+    
+        <div class="imageBlock" id="imageBlock">
+          <img src="assets/picture/102712855_p0.png" alt="Lucyna art by @ireading62">
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <!-- Load the config -->
+  <script src="scripts/config.js"></script>
+  <!-- <script src="scripts/time.js"></script> -->
+  <script src="scripts/greeting.js"></script>
+  <script src="scripts/weather.js"></script>
+
+  <!-- Generate button and list -->
+  <script src="scripts/button.js"></script>
+  <script src="scripts/list.js"></script>
+  <script> lucide.createIcons(); </script>
+  
+</html>
