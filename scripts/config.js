@@ -4,7 +4,7 @@ const CONFIG = {
   openweatherAPI: '8df8c50eadd25ad01ccc3cf84975ca8b',
 
 	greetingMorning: 'Rise and shine!',
-	greetingAfternoon: 'Have a good afternoon <3 ',
+	greetingAfternoon: 'Have a good afternoon <3',
 	greetingEvening: 'Have a pleasant evening ~',
 	greetingNight: 'Please get some rest!!',
 

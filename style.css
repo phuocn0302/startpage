@@ -39,7 +39,7 @@ body {
   height: 100vh;
   background-color: var(--background);
   display: grid;
-  grid-template-rows: 80px 1fr;
+  grid-template-rows: 10vh 1fr;
   grid-template-areas: 
   "header"
   "main"
@@ -50,21 +50,19 @@ body {
 /* Layout */
 
 .header {
-
-  /* border: 5px solid magenta; */
-  justify-content: space-between;
   grid-area: header;
-  /* background-color: var(--foreground); */
+
+  justify-content: space-between;
   background-color: var(--foreground);
   display: flex;
   width: 100vw;
-  height: 80px;
+  /* height: 80px; */
 }
 
 /* Header */
 
 .userBlock {
-  width: 15vw;
+  width: 190px;
 
   display: flex;
   align-items: center;
@@ -74,15 +72,15 @@ body {
 .avatar img {
   width: auto;
   height: auto;
-  max-width: 60px;
-  max-height: 60px;
+  max-width: 7.5vh;
+  max-height: 7.5vh;
   border-radius: 100%;
 }
 
 .greetingBlock {
   width: 50vw;
   
-  margin: 15px 0;
+  margin: 2vh 0;
   align-content: center;
 
   background-color: #23262c;
@@ -95,10 +93,11 @@ body {
   color: var(--violet);
   place-self: center;
   text-align: center;
+  padding: 0 1vw;
 }
 
 .weatherBlock {
-  width: 15vw;
+  width: 190px;
   display: grid;
   grid-template-areas: 
   "icon temp"
@@ -141,9 +140,12 @@ body {
   grid-area: main;
 
   display: flex;
+  justify-content: center;
+  justify-items: center;
 }
 
 .container {
+  width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "lk pt";
@@ -181,7 +183,7 @@ body {
   "b4 b5 b6";
   justify-items: center;
   gap: 2vw;
-  padding: 2vw;
+  padding: 3vh 2vw;
 }
 
 .button {
@@ -235,8 +237,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "l1 l2";
-  padding: 30px;
-  gap: 40px;
+  padding: 3vh 2vw;
+  gap: 2.5vw;
 }
 
 .list {
@@ -291,7 +293,7 @@ body {
 /* Image */
 
 .imageBlock {
-  padding: 30px;
+  padding: 3vh;
 }
 
 .imageBlock img {
@@ -308,3 +310,22 @@ body {
   transform: scale(1.05);
 }
 
+@media only screen and (max-width: 60em) {
+  .container {
+    width: 80vw;
+  }
+
+  .linksBlock {
+    grid-area:1/ span 2;
+  }
+
+  .imageBlock {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .greetingBlock {
+    display: none;
+  }
+}
