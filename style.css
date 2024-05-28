@@ -37,6 +37,7 @@
 body {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   background-color: var(--background);
   display: grid;
   grid-template-rows: 10vh 1fr;
@@ -93,6 +94,7 @@ body {
   color: var(--violet);
   place-self: center;
   text-align: center;
+  line-height: 6vh;
   padding: 0 1vw;
 }
 
