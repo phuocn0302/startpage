@@ -82,8 +82,9 @@ body {
   width: 50vw;
   
   margin: 2vh 0;
-  align-content: center;
-
+  /* align-content: center; */
+  display: flex;
+  place-content: center;
   background-color: #23262c;
   border-radius: 10px;
 }
@@ -92,10 +93,12 @@ body {
   font-size: var(--fg-greet);
   font-weight: 600;
   color: var(--violet);
-  place-self: center;
+  /* place-self: center; */
   text-align: center;
   line-height: 6vh;
   padding: 0 1vw;
+  white-space: nowrap;
+  overflow-x: hidden;
 }
 
 .weatherBlock {
